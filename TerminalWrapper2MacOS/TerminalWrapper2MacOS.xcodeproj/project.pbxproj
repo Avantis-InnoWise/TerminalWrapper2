@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */; };
 		3025FD7827BBCDCA005F5EBA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7727BBCDCA005F5EBA /* main.swift */; };
+		3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7E27BBCFBA005F5EBA /* Base64.swift */; };
+		3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleCommand.swift; sourceTree = "<group>"; };
 		3025FD7427BBCDCA005F5EBA /* TerminalWrapper2MacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper2MacOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		3025FD7727BBCDCA005F5EBA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3025FD7E27BBCFBA005F5EBA /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionCommandType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				3025FD7727BBCDCA005F5EBA /* main.swift */,
+				3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */,
+				3025FD7E27BBCFBA005F5EBA /* Base64.swift */,
+				3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */,
 			);
 			path = TerminalWrapper2MacOS;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */,
+				3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */,
+				3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */,
 				3025FD7827BBCDCA005F5EBA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +190,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMainNibFile = "";
+				LD_NO_PIE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -233,6 +247,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMainNibFile = "";
+				LD_NO_PIE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -248,6 +264,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NYX6FQH9DL;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSMainNibFile = "";
+				LD_NO_PIE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -259,6 +277,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NYX6FQH9DL;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSMainNibFile = "";
+				LD_NO_PIE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
