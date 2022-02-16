@@ -10,7 +10,7 @@
 		3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */; };
 		3025FD7827BBCDCA005F5EBA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7727BBCDCA005F5EBA /* main.swift */; };
 		3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7E27BBCFBA005F5EBA /* Base64.swift */; };
-		3025FD8127BBCFBD005F5EBA /* CommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD8027BBCFBD005F5EBA /* CommandType.swift */; };
+		3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 		3025FD7427BBCDCA005F5EBA /* TerminalWrapper2MacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper2MacOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		3025FD7727BBCDCA005F5EBA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3025FD7E27BBCFBA005F5EBA /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
-		3025FD8027BBCFBD005F5EBA /* CommandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandType.swift; sourceTree = "<group>"; };
+		3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionCommandType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				3025FD7727BBCDCA005F5EBA /* main.swift */,
 				3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */,
 				3025FD7E27BBCFBA005F5EBA /* Base64.swift */,
-				3025FD8027BBCFBD005F5EBA /* CommandType.swift */,
+				3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */,
 			);
 			path = TerminalWrapper2MacOS;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025FD8127BBCFBD005F5EBA /* CommandType.swift in Sources */,
+				3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */,
 				3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */,
 				3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */,
 				3025FD7827BBCDCA005F5EBA /* main.swift in Sources */,

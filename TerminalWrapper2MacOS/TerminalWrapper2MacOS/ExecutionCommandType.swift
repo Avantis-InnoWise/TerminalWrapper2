@@ -8,7 +8,7 @@
 import Foundation
 
 // enumeration of Command Type that we use for filePath
-enum CommandType {
+enum ExecutionCommandType {
     case bash
     case shell
     

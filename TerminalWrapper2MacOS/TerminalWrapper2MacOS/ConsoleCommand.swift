@@ -10,7 +10,7 @@ import Foundation
 // class that execute shell/bash console commands
 class ConsoleCommand {
     // function that execute shell/bash commands with errors handling
-    func safeWrapper(command: String, commandType: CommandType) throws -> String {
+    func safeWrapper(command: String, commandType: ExecutionCommandType) throws -> String {
         // Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
         let task = Process()
         // An Pipe object represents both ends of a pipe and enables communication through the pipe.
