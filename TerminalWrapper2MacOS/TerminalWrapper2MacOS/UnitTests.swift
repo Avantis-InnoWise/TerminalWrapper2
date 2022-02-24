@@ -8,15 +8,15 @@
 import Foundation
 
 // enumeration of Command Type that we use for filePath
-enum ExecutionCommandType {
-    case bash
-    case shell
+enum UnitTests {
+    case first
+    case second
     
     var rawValue: String {
         switch self {
-        case .bash:
+        case .first:
             return "/bin/bash"
-        case .shell:
+        case .second:
             return "/bin/zsh"
         }
     }

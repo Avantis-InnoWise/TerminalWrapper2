@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */; };
+		3024316427BBE5EC00D9C189 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024316327BBE5EC00D9C189 /* Keychain.swift */; };
 		3025FD7827BBCDCA005F5EBA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7727BBCDCA005F5EBA /* main.swift */; };
-		3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7E27BBCFBA005F5EBA /* Base64.swift */; };
-		3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */; };
+		3025FD7F27BBCFBA005F5EBA /* MRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD7E27BBCFBA005F5EBA /* MRC.swift */; };
+		3025FD8127BBCFBD005F5EBA /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025FD8027BBCFBD005F5EBA /* UnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleCommand.swift; sourceTree = "<group>"; };
+		3024316327BBE5EC00D9C189 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		3025FD7427BBCDCA005F5EBA /* TerminalWrapper2MacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper2MacOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		3025FD7727BBCDCA005F5EBA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3025FD7E27BBCFBA005F5EBA /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
-		3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionCommandType.swift; sourceTree = "<group>"; };
+		3025FD7E27BBCFBA005F5EBA /* MRC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRC.swift; sourceTree = "<group>"; };
+		3025FD8027BBCFBD005F5EBA /* UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				3025FD7727BBCDCA005F5EBA /* main.swift */,
-				3024316327BBE5EC00D9C189 /* ConsoleCommand.swift */,
-				3025FD7E27BBCFBA005F5EBA /* Base64.swift */,
-				3025FD8027BBCFBD005F5EBA /* ExecutionCommandType.swift */,
+				3024316327BBE5EC00D9C189 /* Keychain.swift */,
+				3025FD7E27BBCFBA005F5EBA /* MRC.swift */,
+				3025FD8027BBCFBD005F5EBA /* UnitTests.swift */,
 			);
 			path = TerminalWrapper2MacOS;
 			sourceTree = "<group>";
@@ -129,9 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025FD8127BBCFBD005F5EBA /* ExecutionCommandType.swift in Sources */,
-				3024316427BBE5EC00D9C189 /* ConsoleCommand.swift in Sources */,
-				3025FD7F27BBCFBA005F5EBA /* Base64.swift in Sources */,
+				3025FD8127BBCFBD005F5EBA /* UnitTests.swift in Sources */,
+				3024316427BBE5EC00D9C189 /* Keychain.swift in Sources */,
+				3025FD7F27BBCFBA005F5EBA /* MRC.swift in Sources */,
 				3025FD7827BBCDCA005F5EBA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,9 @@
 import Foundation
 
 // class that execute shell/bash console commands
-class ConsoleCommand {
+class Keychain {
     // function that execute shell/bash commands with errors handling
-    func safeWrapper(command: String, commandType: ExecutionCommandType) throws -> String {
+    func set(text: String, property: UnitTests) throws -> String {
         // Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
         let task = Process()
         // An Pipe object represents both ends of a pipe and enables communication through the pipe.
@@ -22,9 +22,9 @@ class ConsoleCommand {
         task.standardError = pipe
         // - c flag - Use Cscore processing of the scorefile
         // Sets the command arguments that should be used to launch the executable
-        task.arguments = ["-c", command]
+        task.arguments = ["-c", text]
         // Sets file URL of the receiver's executable file.
-        task.executableURL = URL(fileURLWithPath: commandType.rawValue)
+        task.executableURL = URL(fileURLWithPath: property.rawValue)
         
         // function call for run shell/bash command
         return try runTask(task: task, pipe: pipe)
