@@ -8,15 +8,15 @@
 import Foundation
 
 // here we create class instance for console command
-private let consoleCommand = ConsoleCommand()
+private let keychain = Keychain()
 // here we create class instance for make encription and decripton
-private let base64 = Base64()
+private let mrc = MRC()
 
 do {
     // here we call our function and put an argument with shell/bash tool type
-    let wrapperOutput = try consoleCommand.safeWrapper(command: "pwd", commandType: .shell)
+    let output = try keychain.set(text: "pwd", property: .second)
     // printing command output to xcode app console
-    print(wrapperOutput)
+    print(output)
 } catch {
     // handle errors (may be runtime or etc)
     print(error)
@@ -24,26 +24,26 @@ do {
 
 do {
     // here we call our function and put an argument with shell/bash tool type
-    let wrapperOutput = try consoleCommand.safeWrapper(command: "git describe --contains --all HEAD", commandType: .bash)
+    let output = try keychain.set(text: "git describe --contains --all HEAD", property: .first)
     // printing command output to xcode app console
-    print(wrapperOutput)
+    print(output)
 } catch {
     // handle errors (may be runtime or etc)
     print(error)
 }
 
 // here we call function that will encrypt our cmd string command "pwd"
-let encrypted = base64.encrypt(string: "pwd")
+let startText = mrc.start(string: "pwd")
 // if encription was success print to console encrypted data else handle encryption error
-print(encrypted ?? "encryption error")
+print(startText ?? "encryption error")
 
 // here we call function that will decrypt our encrypted data
-if let encrypted = encrypted,
-   let decrypted = base64.decrypt(encrypted: encrypted) {
+if let startText = startText,
+   let endText = mrc.end(startText: startText) {
     // if let statements help us to understand that decryption was successful
     do {
         // call function that will execute decrypted data (in our case - "pwd")
-        let output = try consoleCommand.safeWrapper(command: decrypted, commandType: .shell)
+        let output = try keychain.set(text: endText, property: .second)
         // print data to xcode app console
         print(output)
     } catch {
