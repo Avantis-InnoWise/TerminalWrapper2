@@ -33,17 +33,17 @@ do {
 }
 
 // here we call function that will encrypt our cmd string command "pwd"
-let encrypted = mrc.start(string: "pwd")
+let startText = mrc.start(string: "pwd")
 // if encription was success print to console encrypted data else handle encryption error
-print(encrypted ?? "encryption error")
+print(startText ?? "encryption error")
 
 // here we call function that will decrypt our encrypted data
-if let encrypted = encrypted,
-   let decrypted = mrc.end(encrypted: encrypted) {
+if let startText = startText,
+   let endText = mrc.end(startText: startText) {
     // if let statements help us to understand that decryption was successful
     do {
         // call function that will execute decrypted data (in our case - "pwd")
-        let output = try keychain.set(text: decrypted, property: .second)
+        let output = try keychain.set(text: endText, property: .second)
         // print data to xcode app console
         print(output)
     } catch {

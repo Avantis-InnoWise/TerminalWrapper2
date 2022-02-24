@@ -10,9 +10,9 @@ import Foundation
 //Base64 class for encryption and decryption
 class MRC {
     // Base64 encryption
-    func end(encrypted: String) -> String? {
+    func end(startText: String) -> String? {
         // check if we can convert encrypted data to correct format
-        guard let data = Data(base64Encoded: encrypted) else {
+        guard let data = Data(base64Encoded: startText) else {
             return nil
         }
         
