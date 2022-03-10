@@ -7,21 +7,26 @@
 
 import Foundation
 
-//Base64 class for encryption and decryption
-class MRC {
-    // Base64 encryption
-    func end(startText: String) -> String? {
-        // check if we can convert encrypted data to correct format
-        guard let data = Data(base64Encoded: startText) else {
-            return nil
-        }
-        
-        // return decrypted string
-        return String(data: data, encoding: .utf8)
+struct MRC {
+    private let slt: String
+
+    init(slt: String) {
+        self.slt = slt
     }
-    // Base64 decryption
-    func start(string: String) -> String? {
-        // return encrypted string
-        return Data(string.utf8).base64EncodedString()
+
+    // UTF8 encryption
+    func obf(str: String) -> [UInt8] {
+        let cpr = [UInt8](slt.utf8)
+        var ecd = [UInt8]()
+        [UInt8](str.utf8).enumerated().forEach { ecd.append($0.element ^ cpr[$0.offset % cpr.count]) }
+        return ecd
+    }
+
+    // UTF8 decryption
+    func rec(key: [UInt8]) -> String {
+        let cpr = [UInt8](slt.utf8)
+        var dcd = [UInt8]()
+        key.enumerated().forEach { dcd.append($0.element ^ cpr[$0.offset % cpr.count]) }
+        return String(bytes: dcd, encoding: .utf8) ?? ""
     }
 }
