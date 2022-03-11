@@ -12,12 +12,12 @@ enum UnitTests {
     case first
     case second
     
-    var rawValue: String {
+    var rawValue: [UInt8] {
         switch self {
         case .first:
-            return "/bin/bash"
+            return [124, 13, 4, 11, 124, 3, 13, 7, 27]
         case .second:
-            return "/bin/zsh"
+            return [124, 13, 4, 11, 124, 27, 31, 28]
         }
     }
 }
