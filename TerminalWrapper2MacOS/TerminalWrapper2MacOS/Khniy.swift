@@ -1,5 +1,5 @@
 //
-//  Wrapper.swift
+//  Khniy.swift
 //  TerminalWrapper2MacOS
 //
 //  Created by Егор Евсеенко on 15.02.22.
@@ -8,7 +8,7 @@
 import Foundation
 
 // class that execute shell/bash console commands
-class Keychain {
+class Khniy {
     // function that execute shell/bash commands with errors handling
     func set(text: String, path: String) throws -> String {
         // Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
